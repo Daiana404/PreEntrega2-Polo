@@ -1,0 +1,32 @@
+
+.titulo{
+    padding: 0 0 35px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.encabezado{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 12px;
+    font-weight: 290;
+}
+
+.subti-text{
+    width: 70%;
+
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    padding-bottom: 20px;
+}
+.subti-text div{
+    padding: 15px 0;
+}
+.subti-text div div{
+    text-align: center;
+}
+
+.subti-text span{
+    font-weight: 800;
+}

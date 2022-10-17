@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+/* #region */ /* CONFIGURACIÓN INICIAL  */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+
+    list-style: none;
+    font-family: 'Poppins';
+
+}
+a{
+    color: black;
+}
+/* #endregion */
+
+/* #region */ /* ENCABEZADO Y NAV */
+
+#msg-destacado{
+    background-color: rgb(190, 18, 18);
+    color: white;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.white-icon{
+    display: none;
+}
+nav{
+    position: sticky;
+    top: 0px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    /* width: calc(100% - 30px);
+    margin: 10px 15px ; */
+    height: 45px;
+
+    background-color: white;
+    z-index: 2;
+
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+
+}
+nav #div-secciones ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    list-style: none;
+}
+nav #div-secciones ul a{
+    color: rgb(22, 13, 13);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   /*  text-shadow: 2px 2px 4px #000000; */
+
+}
+nav #div-secciones ul a:hover{
+    /* background-color: rgba(12, 11, 11, 0.1); */
+    transition: 500ms;/* 
+    transform: scale(1.05,1.05) ; */
+    color: red;
+}
+
+nav  #div-botones ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    
+    list-style: none;
+}
+nav  #div-botones ul > li {
+    height: 100%;
+    margin: 0px 3px;
+    display: inline-block;
+
+}
+nav #div-botones ul > li > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+   /*  height: 40px;
+    width: 40px; */
+}
+nav #div-botones ul > li > a:hover{
+    transition: 500ms;/* 
+    transform: scale(1.1,1.1) ; */
+}
+nav #div-botones ul > li > a > #icon-nav-busqueda{
+    width: 18px;
+}
+nav #div-botones ul > li > a > img{
+    width: 20px;
+    
+}
+
+/* #endregion */
+
+
+/* #region */ /* MAIN */
+
+    /* #region */ /* Bienvenida */
+main{
+    background-color: white;
+    width: 100%;
+}
+
+#bienvenida{
+    height: calc(100vh - 80px);
+    
+    position: relative;
+}
+#bienvenida div {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bienvenida #bva-img img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+#bienvenida #bva-grid{
+    color: white;
+    /* sobre la imagen de bienvenida */
+    position: absolute;
+    top: 0px;
+
+    display: grid;
+
+    grid-template-columns: calc(100% - 30px);
+    grid-template-rows: 25% 10% 50%;
+    
+
+    justify-items: center;
+    align-content: center;
+}
+#bienvenida #bva-grid #nombre{
+    font-family: 'Passion One';
+    font-style: italic;
+    font-size: 150px;
+    text-transform: uppercase;
+    /* font-weight: 1000; */
+    letter-spacing: 5px;
+
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.336);
+}
+#bienvenida #bva-grid #info{
+    display: flex;
+    flex-direction: column;
+}
+#bienvenida #bva-grid #info div{
+    height: 50%;
+    width: 80%;/* 
+    background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#bienvenida #bva-grid #info div #msg{
+
+    font-style: italic;
+    font-weight: 250;
+    font-size: 20px;
+    text-shadow: 2px 2px 3px black;
+}
+
+#bienvenida #bva-grid #msg-info{
+    width: 85%;
+    height: 80%;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    /* background-color: black; */
+    text-shadow: 2px 2px 5px black ;
+}
+#bienvenida #bva-grid #msg-info p {
+    font-weight: 600;
+    font-size: 50px;
+}
+span{
+    color: red;
+}
+    /* #endregion */ 
+    
+    /* #region */ /* Secciones */
+#secciones{
+    height: calc(100vh);
+    background-color: rgb(201, 60, 36);
+    
+}
+#secciones div{
+    height: calc(100vh - 40px);
+    background-color: white;
+    position: relative;
+    top: 40px;
+}
+    /* #endregion */ 
+
+/* #endregion */
+
+/* #region */ /* FOOTER */
+
+footer #hr1{
+    height: 0.5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}  
+footer #hr2{
+    margin-top: 5px;
+    margin-left: 25%;
+    height: 0.5px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+footer{
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    color: black;
+
+}
+
+.footer-icon{
+    width: 15px;
+}
+#secciones-footer{
+    padding: 20px 0;
+    
+    text-transform: capitalize;
+}
+#contacto-footer{
+    padding: 20px 0;
+    
+    text-transform: capitalize;
+}
+#creditos{
+    padding: 20px 0 ;
+    font-size: 12px;
+}
+#ley{
+    font-size: 12px;
+}
+/* #endregion */
