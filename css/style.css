@@ -23,7 +23,8 @@ a{
 /* #region */ /* ENCABEZADO Y NAV */
 
 #msg-destacado{
-    background-color: rgb(190, 18, 18);
+    /* background-color: rgb(190, 18, 18); */
+    background-color: black;
     color: white;
     height: 40px;
 
@@ -127,7 +128,7 @@ nav #div-botones ul > li > a > img{
 
 /* #region */ /* MAIN */
 
-    /* #region */ /* Bienvenida */
+/* #region */ /* Bienvenida */
 main{
     background-color: white;
     width: 100%;
@@ -137,6 +138,11 @@ main{
     height: calc(100vh - 80px);
     
     position: relative;
+/* 
+    margin-left: 15px;
+    margin-right: 15px; */
+
+    box-sizing: border-box;
 }
 #bienvenida div {
     height: 100%;
@@ -145,6 +151,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+#bva-img{
+    background-color: black;
 }
 #bienvenida #bva-img img{
     width: 100%;
@@ -168,6 +178,7 @@ main{
     align-content: center;
 }
 #bienvenida #bva-grid #nombre{
+    margin-top: 15px;
     font-family: 'Passion One';
     font-style: italic;
     font-size: 150px;
@@ -207,7 +218,7 @@ main{
     justify-content: flex-start;
     
     /* background-color: black; */
-    text-shadow: 2px 2px 5px black ;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0) ;
 }
 #bienvenida #bva-grid #msg-info p {
     font-weight: 600;
@@ -216,20 +227,86 @@ main{
 span{
     color: red;
 }
-    /* #endregion */ 
+/* #endregion */ 
     
-    /* #region */ /* Secciones */
-#secciones{
-    height: calc(100vh);
-    background-color: rgb(201, 60, 36);
+/* #region */ /* Secciones */
+#grid-seccion{
+    height: calc(100vh - 45px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 45% 45%;
+
+    grid-template-areas: "a1 a2 a3"
+                         "a1 a2 a4";
+
+    padding: 15px;
+    padding-top: calc(50px + 20px);
     
+
+    column-gap: 15px;
+    row-gap: 15px;
 }
-#secciones div{
-    height: calc(100vh - 40px);
-    background-color: white;
-    position: relative;
-    top: 40px;
+#grid-seccion #seccion-1, #seccion-2, #seccion-3, #seccion-4{
+    background-color: rgb(41, 25, 7);
 }
+#grid-seccion #seccion-1{
+    grid-area: a1;
+    height: 100%;
+    width: 100%;
+}
+#grid-seccion #seccion-1 div{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/planta4.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+#grid-seccion #seccion-2{
+    grid-area: a2;
+    height: 100%;
+    width: 100%;
+}
+#grid-seccion #seccion-2 div{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/cactus.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+#grid-seccion #seccion-2 div :hover{
+    opacity: 0.4;
+    transition: 400ms;
+}
+#grid-seccion #seccion-3{
+    grid-area: a3;
+    height: 100%;
+    width: 100%;
+}
+#grid-seccion #seccion-3 div{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/macetas.jpg);
+
+    background-size: cover;
+    background-position: center left;
+    opacity: 0.7;
+}
+#grid-seccion #seccion-4{
+    grid-area: a4;
+    height: 100%;
+    width: 100%;
+}
+#grid-seccion #seccion-4 div{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/planta3.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+
     /* #endregion */ 
 
 /* #endregion */

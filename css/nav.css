@@ -1,0 +1,73 @@
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 45px;
+
+    grid-template-areas: "a1 a2 a3";
+}
+.hamburguesa{
+    height: 100%;
+    width: 45px;
+
+    padding-top: 10px;
+    padding-left: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: a1;
+}
+.nav-nombre{
+    color: black;
+    grid-area: a2;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+}
+.div-botones{
+    grid-area: a3;
+}
+
+.lbl-menu{
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    cursor: pointer;/* manito */
+}
+.lbl-menu :hover{
+    cursor: pointer;
+}
+.lbl-menu #spn1, #spn2, #spn3{
+    position: absolute;
+
+    background: rgb(34, 33, 33);
+    width: 25px;
+    height: 2px;
+    border-radius: 5px;
+
+    transition: all 400ms;
+}
+#spn2{
+    top: 8px;
+}
+#spn3{
+    top: 16px;
+}
+#btn-menu{
+    display: none;/* para ocultar el checkbox */
+}
+#btn-menu:checked ~ .lbl-menu #spn1{
+    transform: rotate(135deg);
+    top: 8px;
+}
+#btn-menu:checked ~ .lbl-menu #spn2{
+    opacity: 0;
+}
+#btn-menu:checked ~ .lbl-menu #spn3{
+    transform: rotate(-135deg);
+    top: 8px;
+}

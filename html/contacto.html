@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/nav.css"><!-- para el icono de hamburguesa -->
     
     <link rel="shortcut icon" href="../img/icon/plant.png" type="image/x-icon">
 
@@ -19,15 +20,22 @@
         </p>
     </header>
 
-    <nav>
-        <div id="div-secciones">
-            <ul>
-                <li><a href="#secciones">Productos</a></li>
-                <li><a href="../html/cuidados.html">Cuidados</a></li>
-                <li><a href="../html/contacto.html">Contacto</a></li>
-                <li><a href="../html/preguntas.html">Preguntas</a></li>
-            </ul>
+    <nav class="nav">
+        <div class="hamburguesa">
+            <!-- input checkbox, para que permanezca en su respectiva forma -->
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu" class="lbl-menu">
+                <!-- span para crear el icono -->
+                <span id="spn1"></span>
+                <span id="spn2"></span>
+                <span id="spn3"></span>
+            </label>
         </div>
+
+        <div class="nav-nombre">
+            plantax
+        </div>
+
         <div id="div-botones">
             <ul>
                 <li>
@@ -139,13 +147,13 @@
         <div id="contacto-footer">
             <ul>
                 <li>
-                    <img class="footer-icon" src="../img/icon/instagram.png" alt="">
+                    <img class="footer-icon" src="../img/icon/instagram.svg" alt="">
                     <a href="#">instagram</a></li>
                 <li>
-                    <img class="footer-icon" src="../img/icon/whatsapp.png" alt="">
+                    <img class="footer-icon" src="../img/icon/whatsapp.svg" alt="">
                     <a href="#">whatsapp</a></li>
                 <li>
-                    <img class="footer-icon" src="../img/icon/location.png" alt="">
+                    <img class="footer-icon" src="../img/icon/marcador.svg" alt="">
                     <a href="#">direccion</a></li>
             </ul>
         </div>

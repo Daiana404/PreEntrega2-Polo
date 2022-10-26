@@ -57,7 +57,7 @@
 }
 .tabla{
     display: grid;
-    grid-template-columns: 20px 160px;
+    grid-template-columns: 20px 180px;
     grid-template-rows: 20px;
 
     justify-items: flex-start;
