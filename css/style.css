@@ -128,6 +128,8 @@ nav #div-botones ul > li > a > img{
 
 /* #region */ /* MAIN */
 
+
+
 /* #region */ /* Bienvenida */
 main{
     background-color: white;
@@ -247,7 +249,8 @@ span{
     row-gap: 15px;
 }
 #grid-seccion #seccion-1, #seccion-2, #seccion-3, #seccion-4{
-    background-color: rgb(41, 25, 7);
+    background-color: black;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.438)
 }
 #grid-seccion #seccion-1{
     grid-area: a1;
@@ -309,7 +312,9 @@ span{
 
     /* #endregion */ 
 
-/* #endregion */
+
+/* #endregion*/
+
 
 /* #region */ /* FOOTER */
 
