@@ -1,11 +1,6 @@
 .box-productos{
 /* vuelvo a repetir pero considero la importancia de la secuencia en cascada */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 400px;
-    margin:20px;
-    row-gap: 15px;
-    column-gap: 15px;
 }
 .box-productos .box .box-imagen a .div-1{
     background-image: url(../img/terrarios/terra1.avif);
@@ -21,6 +16,6 @@
 }
 #destacados > p{
     text-align: center;
-    font-size: 25px;
+    font-size: calc(18px + 1vw);
     font-weight: 700;
 }

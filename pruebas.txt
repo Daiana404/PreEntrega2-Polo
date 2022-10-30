@@ -1,4 +1,135 @@
-<!DOCTYPE html>
+nav{
+    position: sticky;
+    top: 0px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 45px;
+
+    background-color: white;
+    z-index: 2;
+
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+
+}
+nav #div-secciones ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    list-style: none;
+}
+nav #div-secciones ul a{
+    color: rgb(22, 13, 13);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   /*  text-shadow: 2px 2px 4px #000000; */
+
+}
+nav #div-secciones ul a:hover{
+    /* background-color: rgba(12, 11, 11, 0.1); */
+    transition: 500ms;/* 
+    transform: scale(1.05,1.05) ; */
+    color: red;
+}
+
+nav  #div-botones ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    
+    list-style: none;
+}
+nav  #div-botones ul > li {
+    height: 100%;
+    margin: 0px 3px;
+    display: inline-block;
+
+}
+nav #div-botones ul > li > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+   /*  height: 40px;
+    width: 40px; */
+}
+nav #div-botones ul > li > a:hover{
+    transition: 500ms;/* 
+    transform: scale(1.1,1.1) ; */
+}
+nav #div-botones ul > li > a > #icon-nav-busqueda{
+    width: 18px;
+}
+nav #div-botones ul > li > a > img{
+    width: 20px;
+    
+}
+
+
+
+
+<nav class="nav">
+        <div class="hamburguesa">
+            <!-- input checkbox, para que permanezca en su respectiva forma -->
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu" class="lbl-menu">
+                <!-- span para crear el icono -->
+                <span id="spn1"></span>
+                <span id="spn2"></span>
+                <span id="spn3"></span>
+            </label>
+        </div>
+
+        <div class="nav-nombre">
+            plantax
+        </div>
+
+        <div id="div-botones">
+            <ul>
+                <li>
+                    <a href="#">
+                    <img id="icon-nav-busqueda" src="../img/icon/lupa.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="cuenta.html">
+                    <img id="icon-nav-user" src="../img/icon/usuario.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <img id="icon-nav-carrito" src="../img/icon/carrito-de-compras.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+            
+                
+            </a>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <!DOCTYPE html>
 <html lang="es">
 <head>
 
@@ -261,3 +392,362 @@
 
 </body>
 </html>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+/* #region */ /* CONFIGURACIÓN INICIAL  */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+
+    list-style: none;
+    font-family: 'Poppins';
+
+}
+a{
+    color: black!important;
+    text-decoration: none!important;
+}
+/* #endregion */
+
+/* #region */ /* ENCABEZADO Y NAV */
+
+#navbarSupportedContent{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.navbar{
+    position: sticky!important;
+    top: 0!important;
+    background-color: white!important;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)!important;
+    font-family: 'Poppins'!important;
+
+    
+    width: 100%!important;
+    height: 55px!important;
+    z-index: 2;
+}
+.navbar-brand{
+    font-style: italic!important;
+    font-weight: 900!important;
+}
+
+#msg-destacado{
+    /* background-color: rgb(190, 18, 18); */
+    background-color: black;
+    color: white;
+    height: 40px;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: calc(8px + 1vw);
+
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0!important;
+}
+.white-icon{
+    display: none;
+}
+
+
+/* #endregion */
+
+
+/* #region */ /* MAIN */
+
+
+
+/* #region */ /* Bienvenida */
+main{
+    background-color: white;
+    width: 100%;
+}
+
+#bienvenida{
+    height: calc(100vh - 80px);
+    
+    position: relative;
+/* 
+    margin-left: 15px;
+    margin-right: 15px; */
+
+    box-sizing: border-box;
+}
+#bienvenida div {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#bva-img{
+    background-color: black;
+}
+#bienvenida #bva-img img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+#bienvenida #bva-grid{
+    color: white;
+    /* sobre la imagen de bienvenida */
+    position: absolute;
+    top: 0px;
+
+    display: grid;
+
+    grid-template-columns: calc(100% - 30px);
+    grid-template-rows: 25% 50%;
+    
+
+    justify-items: center;
+    align-content: center;
+}
+#bienvenida #bva-grid #nombre{
+    margin-top: 15px;
+    font-family: 'Passion One';
+    font-style: italic;
+    font-size: calc(50px + 6vw);
+    text-transform: uppercase;
+    /* font-weight: 1000; */
+    letter-spacing: 5px;
+
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.336);
+}
+
+#bienvenida #bva-grid #msg-info{
+    width: 85%;
+    height: 80%;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+
+    /* background-color: black; */
+    text-shadow: 2px 2px 5px rgb(0, 0, 0) ;
+}
+#bienvenida #bva-grid #msg-info p {
+    width: 100%;
+
+    font-weight: 600;
+    
+    font-size: calc(12px + 3vw);
+}
+span{
+    color: red;
+}
+/* #endregion */ 
+    
+/* #region */ /* Secciones */
+#grid-seccion{
+
+    height: calc(100vh - 45px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 45% 45%;
+
+    grid-template-areas: "a1 a2 a3"
+                         "a1 a2 a4";
+
+    padding: 15px;
+    padding-top: calc(50px + 20px);
+    
+
+    column-gap: 15px;
+    row-gap: 15px;
+}
+#seccion-1, #seccion-2, #seccion-3, #seccion-4{
+    background-color: rgb(37, 24, 24);
+}
+#seccion-1{
+    grid-area: a1;
+}
+#seccion-2{
+    grid-area: a2;
+}
+#seccion-3{
+    grid-area: a3;
+}
+#seccion-4{
+    grid-area: a4;
+}
+#seccion-1 a div{
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url(../img/plantas/zucu2.jpg);
+    opacity: 0.5;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccion-2 a div{
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-image: url(../img/cactus/cactus1.jpg);
+    opacity: 0.5;
+    background-size: cover;
+}
+#seccion-3 a div{
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-image: url(../img/macetas.jpg);
+    opacity: 0.5;
+    background-size: cover;
+}
+#seccion-4 a div{
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-image: url(../img/terrarios/terra1.avif);
+    opacity: 0.5;
+    background-size: cover;
+}
+
+#seccion-1 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
+}
+#seccion-2 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
+
+}
+#seccion-3 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
+
+}
+#seccion-4 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
+}
+
+    /* #endregion */ 
+
+    #destacados{
+        margin-bottom: 100px;
+    }
+
+/* #endregion*/
+
+
+/* #region */ /* FOOTER */
+
+footer{
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    color: black;
+
+}
+
+.footer-icon{
+    width: 15px;
+}
+#secciones-footer{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.199);
+    padding-top: 20px;
+    
+    text-transform: capitalize;
+}
+#secciones-footer ul{
+    padding: 0;
+}
+#contacto-footer{
+    padding: 20px 0;
+    text-transform: capitalize;
+}
+#contacto-footer ul{
+    padding: 0;
+}
+#creditos{
+    padding: 20px 0 ;
+    font-size: calc(8px + 0.5vw);
+}
+#ley{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.199);
+    padding: 15px;
+    font-size: calc(8px + 0.5vw);
+}
+/* #endregion */
+
+/* #region */ /* OTROS HTML */
+
+.iconos-navbar{
+    width: 20px;
+}
+
+
+/* #endregion */

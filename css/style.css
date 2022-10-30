@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
 /* #region */ /* CONFIGURACIÓN INICIAL  */
 html{
     scroll-behavior: smooth;
@@ -16,11 +17,123 @@ html{
 
 }
 a{
-    color: black;
+    color: black!important;
+    text-decoration: none!important;
 }
 /* #endregion */
 
 /* #region */ /* ENCABEZADO Y NAV */
+
+
+    /* #region*/ /*propio nav*/
+
+    nav{
+        position: sticky;
+        top: 0px;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        width: 100%;
+        height: 45px;
+    
+        background-color: white;
+        z-index: 2;
+    
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    
+    }
+    nav #div-secciones ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        list-style: none;
+    }
+    nav #div-secciones ul a{
+        color: rgb(22, 13, 13);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 14px;
+    
+        height: 40px;
+        width: 100px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+       /*  text-shadow: 2px 2px 4px #000000; */
+    
+    }
+    nav #div-secciones ul a:hover{
+        /* background-color: rgba(12, 11, 11, 0.1); */
+        transition: 500ms;/* 
+        transform: scale(1.05,1.05) ; */
+        color: red;
+    }
+    
+    nav  #div-botones ul {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    
+        
+        list-style: none;
+    }
+    nav  #div-botones ul > li {
+        height: 100%;
+        margin: 0px 3px;
+        display: inline-block;
+    
+    }
+    nav #div-botones ul > li > a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+       /*  height: 40px;
+        width: 40px; */
+    }
+    nav #div-botones ul > li > a:hover{
+        transition: 500ms;/* 
+        transform: scale(1.1,1.1) ; */
+    }
+    nav #div-botones ul > li > a > #icon-nav-busqueda{
+        width: 18px;
+    }
+    nav #div-botones ul > li > a > img{
+        width: 20px;
+        
+    }
+    
+
+    /* #endregion */
+
+#navbarSupportedContent{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.navbar{
+    position: sticky!important;
+    top: 0!important;
+    background-color: white!important;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1)!important;
+    font-family: 'Poppins'!important;
+
+    
+    width: 100%!important;
+    height: 55px!important;
+    z-index: 2;
+}
+.navbar-brand{
+    font-style: italic!important;
+    font-weight: 900!important;
+}
 
 #msg-destacado{
     /* background-color: rgb(190, 18, 18); */
@@ -28,100 +141,24 @@ a{
     color: white;
     height: 40px;
 
+    text-align: center;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
+    font-size: calc(8px + 1vw);
+
+    padding: 5px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
+    margin: 0!important;
 }
 .white-icon{
     display: none;
 }
-nav{
-    position: sticky;
-    top: 0px;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    width: 100%;
-    /* width: calc(100% - 30px);
-    margin: 10px 15px ; */
-    height: 45px;
-
-    background-color: white;
-    z-index: 2;
-
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-
-}
-nav #div-secciones ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    list-style: none;
-}
-nav #div-secciones ul a{
-    color: rgb(22, 13, 13);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-
-    height: 40px;
-    width: 100px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-   /*  text-shadow: 2px 2px 4px #000000; */
-
-}
-nav #div-secciones ul a:hover{
-    /* background-color: rgba(12, 11, 11, 0.1); */
-    transition: 500ms;/* 
-    transform: scale(1.05,1.05) ; */
-    color: red;
-}
-
-nav  #div-botones ul {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    
-    list-style: none;
-}
-nav  #div-botones ul > li {
-    height: 100%;
-    margin: 0px 3px;
-    display: inline-block;
-
-}
-nav #div-botones ul > li > a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-   /*  height: 40px;
-    width: 40px; */
-}
-nav #div-botones ul > li > a:hover{
-    transition: 500ms;/* 
-    transform: scale(1.1,1.1) ; */
-}
-nav #div-botones ul > li > a > #icon-nav-busqueda{
-    width: 18px;
-}
-nav #div-botones ul > li > a > img{
-    width: 20px;
-    
-}
 
 /* #endregion */
 
@@ -173,7 +210,7 @@ main{
     display: grid;
 
     grid-template-columns: calc(100% - 30px);
-    grid-template-rows: 25% 10% 50%;
+    grid-template-rows: 25% 50%;
     
 
     justify-items: center;
@@ -183,31 +220,12 @@ main{
     margin-top: 15px;
     font-family: 'Passion One';
     font-style: italic;
-    font-size: 150px;
+    font-size: calc(50px + 6vw);
     text-transform: uppercase;
     /* font-weight: 1000; */
     letter-spacing: 5px;
 
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.336);
-}
-#bienvenida #bva-grid #info{
-    display: flex;
-    flex-direction: column;
-}
-#bienvenida #bva-grid #info div{
-    height: 50%;
-    width: 80%;/* 
-    background-color: red; */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-#bienvenida #bva-grid #info div #msg{
-
-    font-style: italic;
-    font-weight: 250;
-    font-size: 20px;
-    text-shadow: 2px 2px 3px black;
 }
 
 #bienvenida #bva-grid #msg-info{
@@ -219,12 +237,16 @@ main{
     align-items: center;
     justify-content: flex-start;
     
+
     /* background-color: black; */
     text-shadow: 2px 2px 5px rgb(0, 0, 0) ;
 }
 #bienvenida #bva-grid #msg-info p {
+    width: 100%;
+
     font-weight: 600;
-    font-size: 50px;
+    
+    font-size: calc(12px + 3vw);
 }
 span{
     color: red;
@@ -233,6 +255,7 @@ span{
     
 /* #region */ /* Secciones */
 #grid-seccion{
+
     height: calc(100vh - 45px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -248,88 +271,132 @@ span{
     column-gap: 15px;
     row-gap: 15px;
 }
-#grid-seccion #seccion-1, #seccion-2, #seccion-3, #seccion-4{
-    background-color: black;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.438)
+#seccion-1, #seccion-2, #seccion-3, #seccion-4{
+    background-color: rgb(37, 24, 24);
 }
-#grid-seccion #seccion-1{
+#seccion-1{
     grid-area: a1;
-    height: 100%;
-    width: 100%;
 }
-#grid-seccion #seccion-1 div{
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/planta4.jpg);
-    background-position: center;
-    background-size: cover;
-    opacity: 0.7;
-}
-#grid-seccion #seccion-2{
+#seccion-2{
     grid-area: a2;
-    height: 100%;
-    width: 100%;
 }
-#grid-seccion #seccion-2 div{
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/cactus.jpg);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.7;
-}
-#grid-seccion #seccion-2 div :hover{
-    opacity: 0.4;
-    transition: 400ms;
-}
-#grid-seccion #seccion-3{
+#seccion-3{
     grid-area: a3;
-    height: 100%;
-    width: 100%;
 }
-#grid-seccion #seccion-3 div{
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/macetas.jpg);
-
-    background-size: cover;
-    background-position: center left;
-    opacity: 0.7;
-}
-#grid-seccion #seccion-4{
+#seccion-4{
     grid-area: a4;
-    height: 100%;
-    width: 100%;
 }
-#grid-seccion #seccion-4 div{
-    height: 100%;
+#seccion-1 a div{
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
     width: 100%;
-    background-image: url(../img/planta3.jpg);
-    background-position: center;
+    height: 100%;
+
+    background-image: url(../img/plantas/zucu2.jpg);
+    opacity: 0.5;
     background-size: cover;
-    opacity: 0.7;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccion-2 a div{
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-image: url(../img/cactus/cactus1.jpg);
+    opacity: 0.5;
+    background-size: cover;
+}
+#seccion-3 a div{
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-image: url(../img/macetas.jpg);
+    opacity: 0.5;
+    background-size: cover;
+}
+#seccion-4 a div{
+
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto',sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-image: url(../img/terrarios/terra1.avif);
+    opacity: 0.5;
+    background-size: cover;
+}
+
+#seccion-1 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
+}
+#seccion-2 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
+
+}
+#seccion-3 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
+
+}
+#seccion-4 a :hover{
+    transition: 500ms;
+    opacity: 0.8;
 }
 
     /* #endregion */ 
 
+    #destacados{
+        margin-bottom: 100px;
+    }
 
 /* #endregion*/
 
 
 /* #region */ /* FOOTER */
 
-footer #hr1{
-    height: 0.5px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-}  
-footer #hr2{
-    margin-top: 5px;
-    margin-left: 25%;
-    height: 0.5px;
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
-}
 footer{
     height: 420px;
     width: 100%;
@@ -342,20 +409,37 @@ footer{
     width: 15px;
 }
 #secciones-footer{
-    padding: 20px 0;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.199);
+    padding-top: 20px;
     
     text-transform: capitalize;
+}
+#secciones-footer ul{
+    padding: 0;
 }
 #contacto-footer{
     padding: 20px 0;
-    
     text-transform: capitalize;
+}
+#contacto-footer ul{
+    padding: 0;
 }
 #creditos{
     padding: 20px 0 ;
-    font-size: 12px;
+    font-size: calc(8px + 0.5vw);
 }
 #ley{
-    font-size: 12px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.199);
+    padding: 15px;
+    font-size: calc(8px + 0.5vw);
 }
+/* #endregion */
+
+/* #region */ /* OTROS HTML */
+
+.iconos-navbar{
+    width: 20px;
+}
+
+
 /* #endregion */
